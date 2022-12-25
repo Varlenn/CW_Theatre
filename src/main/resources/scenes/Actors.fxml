@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<!--        Еще можно из картинки сделать кнопку :-->
+<!--        ImageView image = new ImageView(new Image("path/to/img"));-->
+<!--        image.setOnAction(e -> {...});-->
+<!--        image.setOnMouseClicked(e -> {...});-->
+<!--        image.setOnMouseMove(e -> {...});-->
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.ActorsController">
+    <children>
+      <ImageView fitHeight="587.0" fitWidth="470.0" layoutX="857.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/main-8.jpg" />
+         </image>
+      </ImageView>
+        <Button fx:id="buy_ticket_button" layoutX="871.0" layoutY="131.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="250.0" style="-fx-background-color: #702626; -fx-background-radius: 10;" text="Приобрести билет" textFill="WHITE">
+            <font>
+                <Font name="Leelawadee UI" size="19.0" />
+            </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+        </Button>
+      <Button fx:id="show_button" layoutX="344.0" layoutY="131.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="250.0" style="-fx-background-color: black; -fx-background-radius: 10;" text="Показы" textFill="WHITE">
+         <font>
+            <Font name="Leelawadee UI" size="19.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="perform_button" layoutX="607.0" layoutY="131.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="250.0" style="-fx-background-color: black; -fx-background-radius: 10;" text="Спектакли" textFill="WHITE">
+         <font>
+            <Font name="Leelawadee UI" size="19.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TableView fx:id="tableActors" layoutX="175.0" layoutY="235.0" prefHeight="419.0" prefWidth="850.0" style="-fx-background-color: 0;">
+        <columns>
+          <TableColumn fx:id="actor_name" prefWidth="506.0" text="Актер" />
+            <TableColumn fx:id="per_name" minWidth="0.0" prefWidth="327.0" text="Спектакли" />
+        </columns>
+      </TableView>
+      <Button fx:id="to_home_button" layoutX="82.0" layoutY="131.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="250.0" style="-fx-background-color: black; -fx-background-radius: 10;" text="На главную" textFill="WHITE">
+         <font>
+            <Font name="Leelawadee UI" size="19.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="pfp_button" layoutX="1035.0" layoutY="32.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" style="-fx-background-radius: 200; -fx-background-color: 0;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fitHeight="64.0" fitWidth="863.0" layoutX="72.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/name.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="name_bar_label" alignment="CENTER_RIGHT" layoutX="736.0" layoutY="53.0" prefHeight="34.0" prefWidth="285.0">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>
